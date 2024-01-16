@@ -1,19 +1,17 @@
 #!/usr/bin/env bash
-#Creating a script that uses case statements
-x=1
-while [ $x -le 20 ]
+# displays Best School 10 times.
+
+COUNTER=1
+while [ $COUNTER -lt 11 ]
 do
-    echo "$x"
-    case $x in
-	4)
-	    echo "bad luck from China"
-	    ;;
-	9)
-	    echo "bad luck from Japan"
-	    ;;
-	17)
-	    echo "bad luck from Italy"
-	    ;;
-    esac
-    ((x++))
+    if [ $COUNTER = 4 ]
+    then
+        echo "bad luck"
+    elif [ $COUNTER = 8 ]
+    then
+        echo "good luck"
+    else
+        echo "Best School"
+    fi
+    let COUNTER+=1
 done
